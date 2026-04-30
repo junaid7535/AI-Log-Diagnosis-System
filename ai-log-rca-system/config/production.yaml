@@ -1,0 +1,52 @@
+ingestion:
+  kafka_brokers: ["kafka:9092"]
+  topic: "system_logs"
+  batch_size: 1000
+  max_lag_seconds: 60
+
+parsing:
+  method: "adaptive"  # drain, logppt, adaptive
+  embedding_model: "microsoft/codebert-base"
+  active_learning:
+    threshold: 0.7
+    human_label_queue: "human_labels"
+
+anomaly:
+  ensemble:
+    models: ["isolation_forest", "lstm_ae", "transformer"]
+    weights: [0.3, 0.4, 0.3]
+  adaptive_threshold:
+    initial: 0.95
+    learning_rate: 0.01
+
+causal:
+  algorithm: "pcmci"
+  max_lag: 10
+  significance: 0.01
+  gnn:
+    hidden_dim: 256
+    num_layers: 3
+
+llm:
+  model: "mistralai/Mistral-7B-Instruct-v0.2"
+  quantization: "4bit"
+  temperature: 0.2
+  max_tokens: 4096
+  tools_enabled: true
+
+storage:
+  timeseries: "postgresql://user:pass@timescale:5432/logs"
+  vector: "chromadb://localhost:8000"
+  graph: "neo4j://localhost:7687"
+  cache: "redis://redis:6379"
+
+api:
+  host: "0.0.0.0"
+  port: 8000
+  workers: 4
+  rate_limit: "100/minute"
+
+monitoring:
+  prometheus_port: 9090
+  metrics_interval: 15
+  alert_webhook: "http://alertmanager:9093"
