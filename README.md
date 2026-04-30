@@ -8,7 +8,7 @@
 
 ## Overview
 
-**AI-Log-RCA** is an advanced, production-ready system that automates log analysis, anomaly detection, and root cause identification using cutting-edge AI/ML techniques. Built for GSoC 2026, this system reduces manual troubleshooting effort by **90%** and decreases Mean Time To Resolution (MTTR) by **75%**.
+**AI-Powered Log Diagnosis** is an advanced, production-ready system that automates log analysis, anomaly detection, and root cause identification using cutting-edge AI/ML techniques. Built for GSoC 2026, this system reduces manual troubleshooting effort by **90%** and decreases Mean Time To Resolution (MTTR) by **75%**.
 
 ### Core Capabilities
 
