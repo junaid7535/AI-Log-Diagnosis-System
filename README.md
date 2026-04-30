@@ -32,23 +32,6 @@
 | **Log Analysis Coverage** | 5% of logs | 100% of logs | **20x** ↑ |
 | **On-call Engineer Hours** | 40 hrs/week | 10 hrs/week | **75%** ↓ |
 
-### Financial Impact (Annual)
-
-```yaml
-Cost Savings Breakdown:
-  Engineering Time Saved: $450,000
-    - 30 engineers × 30 hours/week saved × $100/hr × 50 weeks
-  
-  Reduced Downtime: $1,200,000
-    - 3 major incidents avoided/month × 4hr avg downtime × $100k/hour
-  
-  Operational Efficiency: $300,000
-    - Automated triage and correlation
-  
-  TOTAL ANNUAL SAVINGS: $1,950,000
-  ROI: 1,300% (based on $150k implementation cost)
-
-
 # Technical Impact & Performance Benchmarks
 
 ## Performance Metrics Dashboard
